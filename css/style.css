@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+* {
+    --font-family: "League Spartan", sans-serif;
+    /* theme one */
+    --Very-dark-desaturated-blue-main: hsl(222, 26%, 31%);
+    --Very-dark-desaturated-blue-two: hsl(223, 31%, 20%); /* (toggle background, keypad background)*/
+    --Very-dark-desaturated-blue-three: hsl(224, 36%, 15%); /* (screen background)*/
+    /* keys */
+    --Desaturated-dark-blue-key-background: hsl(225, 21%, 49%);
+    --Desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%);
+    --Red-key-background-toggle: hsl(6, 63%, 50%);
+    --Dark-red-key-shadow: hsl(6, 70%, 34%);
+    --Light-grayish-orange-key-background: hsl(30, 25%, 89%);
+    --Grayish-orange-key-shadow: hsl(28, 16%, 65%);
+    /* #### Text */
+    --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0%, 100%);
+    box-sizing: border-box; /* Move box-sizing to a global style */
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--Very-dark-desaturated-blue-main) ;
+    padding: 20px;
+    color: white;
+}
+
+
+/*topstyle style*/
+h1{
+    font-size: 36px;
+}
+.THEME{
+    font-size: 14px;
+}
+.tri-state-toggle {
+    background-color: var(--Very-dark-desaturated-blue-two);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    padding: 5px;
+    transition: all 500ms ease; 
+}
+
+.tri-state-toggle-button{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: none;
+    padding: 0;
+    border: none;
+    transition:all 0.5s ease;
+    background-color: transparent;
+}
+.numberSpan {
+    top: -40px;
+    width: 70px;
+}
+.tri-state-toggle-button-active{
+    background-color: var(--Red-key-background-toggle);
+    box-shadow: none !important;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 0;
+    transition:all 0.5s ease;
+    border: none;
+} 
+.tri-state-toggle-button:focus {
+    outline: none;
+  }
+/*output style*/
+
+input{
+    width: 100%;
+    background-color: var(--Very-dark-desaturated-blue-three);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 70px;
+    color: white;
+    text-align: right;
+}
+
+/*keys container styles*/
+.keys-Container{
+    background-color: var(--Very-dark-desaturated-blue-two);
+}
+
+.calcutorKeys{
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    padding: 10px;
+}
+.bottom-buttons{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    padding: 10px;
+    gap: 0.5rem;
+}
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0px 4px 0px var(--Grayish-orange-key-shadow);
+    outline-style: none;
+    background-color: var(--Light-grayish-orange-key-background);
+}
+button:hover{
+    background-color: var(--White);
+}
+.keys-Container{
+    border-radius: 10px;
+}
+.buttonColor{
+    background-color: var(--Desaturated-dark-blue-key-background);
+    color: var(--White);
+    box-shadow: 0px 4px 0px var(--Desaturated-dark-blue-key-shadow);
+}
+.buttonColor:hover{
+    background-color: var(--Very-dark-grayish-blue);
+}
+.equalBtn{
+    background-color: var(--Red-key-background-toggle);
+    color: var(--White);
+    box-shadow: 0px 4px 0px var(--Dark-red-key-shadow);
+}
+.equalBtn:hover{
+background-color:hsl(6, 48%, 60%) ;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<main class="calculator-container ">
+
+  <!--top container  -->
+  <div class="top-Container d-flex justify-content-between">
+    <div class="left">
+      <h1>calc</h1>
+    </div>
+    <div class="right d-flex ">
+      <p class="me-3 THEME"> THEME</p>
+    <div class="tri-state-toggle mb-2 position-relative" id="triContainer">
+      <span class="d-flex justify-content-between  position-absolute numberSpan">
+        <p class="me-2 ">1</p>
+        <p class="me-2 ">2</p>
+        <p class="me-2 ">3</p>
+      </span>
+      <button class="tri-state-toggle-button" id="toggle-button1"></button>
+      <button class="tri-state-toggle-button" id="toggle-button2"></button>
+      <button class="tri-state-toggle-button" id="toggle-button3"></button>
+    </div>
+  </div>
+</div>
+<!--outPutContainer  -->
+<div class="outPutContainer">
+  <input type="text" readonly id="inputOut" >
+</div>
+<!--keys-Container  -->
+<div class="keys-Container mt-3 p-3 mb-3" id="keys-Container">
+<div class="calcutorKeys">
+  <button class="buttons" onclick="appendToDisplay('7')">7</button>
+  <button class="buttons" onclick="appendToDisplay('8')">8</button>
+  <button class="buttons" onclick="appendToDisplay('9')">9</button>
+  <button id="buttonColor" class="buttonColor" onclick="deleteLastCharacter()">Del</button>
+  <button class="buttons" onclick="appendToDisplay('4')">4</button>
+  <button class="buttons" onclick="appendToDisplay('5')">5</button>
+  <button class="buttons" onclick="appendToDisplay('6')">6</button>
+  <button class="buttons" onclick="appendToDisplay('+')">+</button>
+  <button class="buttons" onclick="appendToDisplay('1')">1</button>
+  <button class="buttons" onclick="appendToDisplay('2')">2</button>
+  <button class="buttons" onclick="appendToDisplay('3')">3</button>
+  <button class="buttons" onclick="appendToDisplay('-')">-</button>
+  <button class="buttons" onclick="appendToDisplay('.')">.</button>
+  <button class="buttons" onclick="appendToDisplay('0')">0</button>
+  <button class="buttons" onclick="appendToDisplay('/')">/</button>
+  <button class="buttons" onclick="appendToDisplay('*')">x</button>
+</div>
+<div class="bottom-buttons">
+<button id="buttonColor-1"  class="buttonColor" onclick="clearDisplay()">RESET</button>
+<button  id="equalBtn"  class="equalBtn" onclick="calculate()">=</button>
+</div>
+</div>
+</main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/melkhateeb193">Your Name Here</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
